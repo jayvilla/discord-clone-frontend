@@ -17,7 +17,6 @@ export default function TopBar({ serverId }: { serverId?: string }) {
           const channelId = pathname.split("/").pop();
           if (!channelId) return;
           const ch = await getChannelById(channelId);
-          console.log("ch", ch);
           setTitle(`#${ch.name}`);
           setSubtitle("Text Channel");
         } else if (serverId) {
